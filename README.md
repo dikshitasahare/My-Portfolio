@@ -23,7 +23,7 @@ This portfolio showcases my technical skills, projects, certifications, and lear
 * CSS3
 * GitHub
 
-https://github.com/user-attachments/assets/da9606c7-5879-4dc1-9064-d27a1d28ba0d
+
 
 
 
