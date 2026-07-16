@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects — Dikshita Sahare</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      /* Overlay that slides the next page up over this one as you keep scrolling */
+      .next-page-overlay{
+        position:fixed;
+        top:0; left:0;
+        width:100%; height:100%;
+        transform:translateY(100%);
+        z-index:9999;
+        box-shadow:0 -20px 50px rgba(0,0,0,0.45);
+        pointer-events:none;
+        background:#060b18;
+      }
+      .next-page-overlay iframe{
+        width:100%; height:100%;
+        border:none;
+        display:block;
+      }
+    </style>
+</head>
+
+<body>
+
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Navigation -->
+    <nav class="topnav">
+        <div class="nav-inner">
+
+            <div class="logo">
+                Dikshita Sahare <span></span>
+            </div>
+
+            
+
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="skills.html">Skills</a>
+                <a href="projects.html" class="active">Projects</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Projects -->
+    <div class="page">
+
+        <div class="head">
+            <h2>My <span>Projects</span></h2>
+            <p>A collection of my Data Science, AI & Machine Learning projects.</p>
+        </div>
+
+     
+        <section class="projects-grid">
+
+            <!-- Project 1 -->
+            <div class="card show" data-tags="python flask">
+
+                <div class="card-banner">🌍</div>
+
+                <div class="card-body">
+
+                    <div class="card-tag">
+                        ML · Flask App
+                    </div>
+
+                    <h3>Tourism Experience Analytics</h3>
+
+                    <p>
+                        Rating prediction, visit-mode classification, and a hybrid
+                        recommendation system with an interactive India tourism map
+                        using Flask and Folium.
+                    </p>
+
+                    <div class="pills">
+                        <span class="pill">Python</span>
+                        <span class="pill">Flask</span>
+                        <span class="pill">Folium</span>
+                        <span class="pill">Scikit-learn</span>
+                    </div>
+
+                    <div class="card-links">
+                        <a href="https://github.com/dikshitasahare/Tourism-Experience-Analytics" target="_blank" rel="noopener" class="code-link">View Project</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Project 2 -->
+            <div class="card show" data-tags="python streamlit">
+
+                <div class="card-banner">🐦</div>
+
+                <div class="card-body">
+
+                    <div class="card-tag">
+                        Dashboard · Streamlit
+                    </div>
+
+                    <h3>Bird Species Analytics</h3>
+
+                    <p>
+                        Interactive dashboard for bird observation analysis using
+                        SQLite, Streamlit, Power BI, and Folium maps.
+                    </p>
+
+                    <div class="pills">
+                        <span class="pill">SQLite</span>
+                        <span class="pill">Power BI</span>
+                        <span class="pill">Streamlit</span>
+                    </div>
+
+                    <div class="card-links">
+                        <a href="https://github.com/dikshitasahare/Bird-Species-Observation-Analysis" target="_blank" rel="noopener" class="code-link">View Project</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Project 3 -->
+            <div class="card show" data-tags="python deeplearning">
+
+                <div class="card-banner">🦺</div>
+
+                <div class="card-body">
+
+                    <div class="card-tag">
+                        Computer Vision
+                    </div>
+
+                    <h3>PPE Safety Detection</h3>
+
+                    <p>
+                        Real-time detection of helmets, safety vests and gloves
+                        using YOLOv8 to improve workplace safety compliance.
+                    </p>
+
+                    <div class="pills">
+                        <span class="pill">YOLOv8</span>
+                        <span class="pill">OpenCV</span>
+                        <span class="pill">TensorFlow</span>
+                    </div>
+
+                    <div class="card-links">
+                        <a href="https://github.com/dikshitasahare/Safety-Equipment-Detection" target="_blank" rel="noopener" class="code-link">View Project</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Project 4 -->
+<div class="card show" data-tags="python django ai fullstack">
+
+    <div class="card-banner">🤖</div>
+
+    <div class="card-body">
+
+        <div class="card-tag">
+            AI Assistant
+        </div>
+
+        <h3>AIRA – Full-Stack AI Assistant</h3>
+
+        <p>
+            An intelligent ChatGPT-like AI assistant built from scratch using Django,
+            WebSockets, and Groq API. AIRA supports real-time AI conversations,
+            document analysis, code assistance, weather information, and file
+            understanding through a modern, responsive interface.
+        </p>
+
+        <div class="pills">
+            <span class="pill">Python</span>
+            <span class="pill">Django</span>
+            <span class="pill">WebSockets</span>
+            <span class="pill">Groq API</span>
+            <span class="pill">JavaScript</span>
+            <span class="pill">HTML/CSS</span>
+        </div>
+
+        <div class="card-links">
+            <a href="https://github.com/dikshitasahare/Aira"
+               target="_blank"
+               rel="noopener"
+               class="code-link">
+                View Project
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+
+    </footer>
+
+    <!-- Overlay that reveals the next page as the user keeps scrolling past the bottom -->
+    <div class="next-page-overlay" id="nextPageOverlay">
+      <iframe id="nextPageFrame" src="about:blank" loading="lazy"></iframe>
+    </div>
+
+    <!-- Mobile Menu -->
+    <script>
+        const toggle = document.getElementById("navToggle");
+        const links = document.getElementById("navLinks");
+
+        toggle.addEventListener("click", () => {
+            links.classList.toggle("open");
+            toggle.classList.toggle("open");
+        });
+
+        // Filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const cards = document.querySelectorAll('.card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const filter = btn.dataset.filter;
+
+                cards.forEach(card => {
+                    const tags = card.dataset.tags || '';
+                    if (filter === 'all' || tags.includes(filter)) {
+                        card.classList.add('show');
+                    } else {
+                        card.classList.remove('show');
+                    }
+                });
+            });
+        });
+
+        // Scroll progress bar
+        const scrollProgress = document.getElementById('scrollProgress');
+        function updateScrollProgress() {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+            scrollProgress.style.width = pct + '%';
+        }
+        window.addEventListener('scroll', updateScrollProgress);
+        window.addEventListener('load', updateScrollProgress);
+
+        // Theme toggle
+        const themeToggle = document.getElementById('themeToggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
+            themeToggle.textContent = document.body.classList.contains('light-mode') ? '☀️' : '🌙';
+        });
+    </script>
+
+    <!-- Progressive scroll-to-next-page transition -->
+    <script>
+    (function(){
+      const nextPage = 'contact.html'; // Projects ke baad Contact page
+      const overlay = document.getElementById('nextPageOverlay');
+      const frame = document.getElementById('nextPageFrame');
+      let frameLoaded = false;
+      let progress = 0;
+      let navigating = false;
+      let settleTimer = null;
+
+      function isAtBottom(){
+        return (window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 2;
+      }
+
+      function ensureFrameLoaded(){
+        if (!frameLoaded){
+          frame.src = nextPage;
+          frameLoaded = true;
+        }
+      }
+
+      function render(withTransition){
+        overlay.style.transition = withTransition ? 'transform .35s ease' : 'none';
+        overlay.style.transform = `translateY(${(1 - progress) * 100}%)`;
+        overlay.style.pointerEvents = progress > 0 ? 'auto' : 'none';
+      }
+
+      function setProgress(p, withTransition){
+        progress = Math.max(0, Math.min(1, p));
+        render(withTransition);
+      }
+
+      function settle(){
+        if (navigating) return;
+        if (progress > 0.35){
+          navigating = true;
+          setProgress(1, true);
+          setTimeout(() => { window.location.href = nextPage; }, 320);
+        } else {
+          setProgress(0, true);
+        }
+      }
+
+      function queueSettle(){
+        clearTimeout(settleTimer);
+        settleTimer = setTimeout(settle, 140);
+      }
+
+      window.addEventListener('wheel', (e) => {
+        if (navigating) return;
+        if (isAtBottom() && e.deltaY > 0){
+          ensureFrameLoaded();
+          setProgress(progress + e.deltaY / window.innerHeight, false);
+          queueSettle();
+        } else if (progress > 0 && e.deltaY < 0){
+          setProgress(progress + e.deltaY / window.innerHeight, false);
+          queueSettle();
+        }
+      }, { passive: true });
+
+      let touchStartY = 0;
+      let engagedAtStart = false;
+
+      window.addEventListener('touchstart', (e) => {
+        touchStartY = e.touches[0].clientY;
+        engagedAtStart = isAtBottom();
+      }, { passive: true });
+
+      window.addEventListener('touchmove', (e) => {
+        if (navigating) return;
+        if (!engagedAtStart && progress === 0) return;
+        const delta = touchStartY - e.touches[0].clientY;
+        if (delta > 0) ensureFrameLoaded();
+        setProgress(delta / window.innerHeight, false);
+      }, { passive: true });
+
+      window.addEventListener('touchend', () => {
+        settle();
+        engagedAtStart = false;
+      });
+    })();
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dikshita Sahare | Data Scientist & AI/ML Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+      /* Ensure the hero photo is perfectly centered inside the ring */
+      .hero-visual{
+        width:100%;
+      }
+      .photo-ring-wrap{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        width:100%;
+      }
+      .photo-ring-inner img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        object-position:center center;
+      }
+    </style>
+    <style>
+      /* Overlay that slides the next page up over this one as you keep scrolling */
+      .next-page-overlay{
+        position:fixed;
+        top:0; left:0;
+        width:100%; height:100%;
+        transform:translateY(100%);
+        z-index:9999;
+        box-shadow:0 -20px 50px rgba(0,0,0,0.45);
+        pointer-events:none;
+        background:#060b18;
+      }
+      .next-page-overlay iframe{
+        width:100%; height:100%;
+        border:none;
+        display:block;
+      }
+    </style>
+</head>
+
+<body>
+
+    <!-- Cursor spotlight glow -->
+    <div class="spotlight-cursor" id="spotlightCursor"></div>
+
+    <!-- Navigation -->
+    <nav class="topnav">
+        <div class="nav-inner">
+
+            <div class="logo">
+                Dikshita Sahare<span></span>
+            </div>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About</a>
+                <a href="skills.html">Skills</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="page">
+
+        <section class="hero-split">
+
+            <!-- Left Section -->
+            <div class="hero-text">
+
+                <div class="status-badge">
+                    <span class="status-dot"></span>
+                    Open to opportunities
+                </div>
+
+                <h1>
+                    <span class="hl">Hi, I'm</span>
+                    <span class="hl grad">Dikshita</span>
+                </h1>
+
+                <div class="role">
+                    <span class="role-type" id="roleType"></span>
+                </div>
+
+                <p class="tag">
+                    I am an aspiring Data Scientist with a strong foundation in Python, SQL, Data Analytics, Machine Learning, Deep Learning, and Artificial Intelligence. I enjoy transforming raw data into meaningful insights through data visualization and predictive modeling. My expertise includes building interactive dashboards using Power BI and Tableau, performing data analysis, and developing AI/ML projects that solve real-world problems. I am passionate about continuously learning emerging technologies and applying data-driven solutions to create meaningful impact.
+                </p>
+
+                               <div class="hero-btns">
+
+                    <a href="projects.html" class="btn btn-primary btn-magnetic">
+                        View My Work
+                    </a>
+
+                    <a href="assets/resume/Dikshita_Sahare_Resume.pdf"
+                        class="btn btn-ghost btn-magnetic"
+                        target="_blank"
+                        rel="noopener">
+                        View Resume
+                    </a>
+
+                </div>
+
+                <div class="mini-terminal">
+                    <div class="terminal-dots"><span></span><span></span><span></span></div>
+                    <div class="terminal-body" id="terminalBody"></div>
+                </div>
+
+                <div class="social-row">
+
+                    <a href="mailto:dikshitasahare@email.com" title="Email">
+                        ✉️
+                    </a>
+
+                    <a href="https://github.com/dikshitasahare"
+                        target="_blank"
+                        rel="noopener"
+                        title="GitHub">
+                        💻
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/dikshitasahare/"
+                        target="_blank"
+                        rel="noopener"
+                        title="LinkedIn">
+                        🔗
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Right Section -->
+            <div class="hero-visual">
+
+                <div class="photo-ring-wrap">
+                    <div class="photo-ring">
+                        <div class="photo-ring-inner">
+                            <img src="pro-compresso.png" alt="Dikshita Sahare">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+    </footer>
+
+    <!-- Overlay that reveals the next page as the user keeps scrolling past the bottom -->
+    <div class="next-page-overlay" id="nextPageOverlay">
+      <iframe id="nextPageFrame" src="about:blank" loading="lazy"></iframe>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile nav toggle
+        const toggle = document.getElementById("navToggle");
+        const links = document.getElementById("navLinks");
+
+        toggle.addEventListener("click", () => {
+            links.classList.toggle("open");
+            toggle.classList.toggle("open");
+        });
+
+        // Cursor spotlight glow
+        const spotlight = document.getElementById('spotlightCursor');
+        document.addEventListener('mousemove', (e) => {
+            spotlight.style.setProperty('--x', e.clientX + 'px');
+            spotlight.style.setProperty('--y', e.clientY + 'px');
+        });
+
+        // Magnetic buttons
+        document.querySelectorAll('.btn-magnetic').forEach(btn => {
+            btn.addEventListener('mousemove', (e) => {
+                const rect = btn.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                btn.style.transform = `translate(${x * 0.15}px, ${y * 0.3}px)`;
+            });
+            btn.addEventListener('mouseleave', () => {
+                btn.style.transform = 'translate(0, 0)';
+            });
+        });
+
+        // Typewriter role-switcher
+        const roles = ["Data Scientist", "AI/ML Engineer", "Python Developer", "Deep Learning Enthusiast"];
+        const roleEl = document.getElementById('roleType');
+        let roleIndex = 0, charIndex = 0, deleting = false;
+
+        function typeRole() {
+            const current = roles[roleIndex];
+            if (!deleting) {
+                roleEl.textContent = current.slice(0, charIndex + 1);
+                charIndex++;
+                if (charIndex === current.length) {
+                    deleting = true;
+                    setTimeout(typeRole, 1400);
+                    return;
+                }
+            } else {
+                roleEl.textContent = current.slice(0, charIndex - 1);
+                charIndex--;
+                if (charIndex === 0) {
+                    deleting = false;
+                    roleIndex = (roleIndex + 1) % roles.length;
+                }
+            }
+            setTimeout(typeRole, deleting ? 45 : 90);
+        }
+        typeRole();
+    </script>
+
+    <!-- Progressive scroll-to-next-page transition -->
+    <script>
+    (function(){
+      const nextPage = 'about.html'; // Home ke baad About page
+      const overlay = document.getElementById('nextPageOverlay');
+      const frame = document.getElementById('nextPageFrame');
+      let frameLoaded = false;
+      let progress = 0;      // 0 = hidden, 1 = fully covering
+      let navigating = false;
+      let settleTimer = null;
+
+      function isAtBottom(){
+        return (window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 2;
+      }
+
+      function ensureFrameLoaded(){
+        if (!frameLoaded){
+          frame.src = nextPage;
+          frameLoaded = true;
+        }
+      }
+
+      function render(withTransition){
+        overlay.style.transition = withTransition ? 'transform .35s ease' : 'none';
+        overlay.style.transform = `translateY(${(1 - progress) * 100}%)`;
+        overlay.style.pointerEvents = progress > 0 ? 'auto' : 'none';
+      }
+
+      function setProgress(p, withTransition){
+        progress = Math.max(0, Math.min(1, p));
+        render(withTransition);
+      }
+
+      function settle(){
+        if (navigating) return;
+        if (progress > 0.35){
+          navigating = true;
+          setProgress(1, true);
+          setTimeout(() => { window.location.href = nextPage; }, 320);
+        } else {
+          setProgress(0, true);
+        }
+      }
+
+      function queueSettle(){
+        clearTimeout(settleTimer);
+        settleTimer = setTimeout(settle, 140);
+      }
+
+      // Desktop mouse wheel: only engages once you're at the very bottom
+      window.addEventListener('wheel', (e) => {
+        if (navigating) return;
+        if (isAtBottom() && e.deltaY > 0){
+          ensureFrameLoaded();
+          setProgress(progress + e.deltaY / window.innerHeight, false);
+          queueSettle();
+        } else if (progress > 0 && e.deltaY < 0){
+          setProgress(progress + e.deltaY / window.innerHeight, false);
+          queueSettle();
+        }
+      }, { passive: true });
+
+      // Mobile swipe: drag the next page up in real time
+      let touchStartY = 0;
+      let engagedAtStart = false;
+
+      window.addEventListener('touchstart', (e) => {
+        touchStartY = e.touches[0].clientY;
+        engagedAtStart = isAtBottom();
+      }, { passive: true });
+
+      window.addEventListener('touchmove', (e) => {
+        if (navigating) return;
+        if (!engagedAtStart && progress === 0) return;
+        const delta = touchStartY - e.touches[0].clientY;
+        if (delta > 0) ensureFrameLoaded();
+        setProgress(delta / window.innerHeight, false);
+      }, { passive: true });
+
+      window.addEventListener('touchend', () => {
+        settle();
+        engagedAtStart = false;
+      });
+    })();
+    </script>
+
+</body>
+
+</html>
