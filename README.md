@@ -23,7 +23,14 @@ This portfolio showcases my technical skills, projects, certifications, and lear
 * CSS3
 * GitHub
 
-[🎥 Watch Demo Video](./assets/finalport.mp4)
+[🎥 Watch Demo Video]
+
+
+https://github.com/user-attachments/assets/eb00ad59-89f9-43bf-8c1e-19c907b1a6c0
+
+
+
+
 
 
 
